@@ -1,13 +1,18 @@
 package com.chapter6._ach.simply;
 
-public class SecondReceiver implements ICommand {
+public class ReceiverInteger implements IReceiver {
 	private int state = 0;
 
-	public SecondReceiver() {}
+	public ReceiverInteger() {}
 
 	@Override
 	public void execute() {
-		turnUp();
+		if(state == 0)
+			turnUp();
+		else if (state == 1)
+			turnDown();
+		else
+			return; //throw exception
 	}
 
 	public void turnUp() {

@@ -1,17 +1,17 @@
 package com.chapter6._ach.simply;
 
 public class Invoker {
-	ICommand slot;
+	IReceiver receiver;
 
 	public Invoker() {
 	}
 
-	public void setCommand(ICommand command) {
-		slot = command;
+	public void setReceiver(IReceiver receiver) {
+		this.receiver = receiver;
 	}
 
 	public void buttonWasPressed() {
-		slot.execute();
+		receiver.execute();
 	}
 	
 }

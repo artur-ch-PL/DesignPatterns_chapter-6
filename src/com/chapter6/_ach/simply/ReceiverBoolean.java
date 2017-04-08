@@ -1,9 +1,9 @@
 package com.chapter6._ach.simply;
 
-public class Receiver {
+public class ReceiverBoolean {
 	private boolean state;
 	
-	public Receiver() {}
+	public ReceiverBoolean() {}
 	
 	public void switchCommand(){
 		state = !state;

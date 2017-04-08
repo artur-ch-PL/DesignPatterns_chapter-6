@@ -3,14 +3,14 @@ package com.chapter6._ach.simply;
 public class Main {
 	public static void main(String[] args) {
 		Invoker invoker = new Invoker();
-		Receiver receiver = new Receiver();
-		SecondReceiver secondReceiver = new SecondReceiver();
+		ReceiverBoolean receiverBool = new ReceiverBoolean();
+		ReceiverInteger receiverInt = new ReceiverInteger();
 
-		invoker.setCommand(new ConcreteReceiverCommand(receiver));
+		invoker.setReceiver(new ConcreteReceiverBoolCommand(receiverBool));
 		invoker.buttonWasPressed();
 		invoker.buttonWasPressed();
 
-		invoker.setCommand(new ConcreteSecondReceiverCommand(secondReceiver));
+		invoker.setReceiver(new ConcreteReceiverIntegerCommand(receiverInt));
 		invoker.buttonWasPressed();
 		invoker.buttonWasPressed();
 	}
